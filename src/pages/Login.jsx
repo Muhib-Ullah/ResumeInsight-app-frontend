@@ -21,7 +21,7 @@ function Login() {
       if (response.status === 200) {
         toast.success(response.data.message || 'Login successful!')
         setToken(response.data.data?.token)
-        navigate('/dashboard', { replace: true })
+        navigate('/dashboard')
       }
     } catch (error) {
         toast.error(error.response?.data?.message || 'Login failed!');

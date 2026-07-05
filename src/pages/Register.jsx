@@ -19,7 +19,7 @@ function Register() {
       const response = await axios.post('http://localhost:5000/api/auth/register', data)
       if (response.status === 201) {
         toast.success(response.data.message || 'Registration successful!')
-        navigate('/login', { replace: true })
+        navigate('/login')
       }
     } catch (error) {
       toast.error(error.response?.data?.message || 'Registration failed!')
