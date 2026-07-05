@@ -7,7 +7,7 @@ import { isAuthenticated } from '../../utils/token'
 
 const PublicRoute = ({children}) => {
   if (isAuthenticated()) {
-    return <Navigate to="/dashboard"/>
+    return <Navigate to="/dashboard" replace />
   }
 
   return children;

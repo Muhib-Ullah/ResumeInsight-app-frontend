@@ -7,7 +7,7 @@ import { isAuthenticated } from '../../utils/token'
 
 const PrivateRoute = ({children}) => {
   if (!isAuthenticated()) {
-    return <Navigate to="/login"/>
+    return <Navigate to="/login" replace />
   }
 
   return children;
